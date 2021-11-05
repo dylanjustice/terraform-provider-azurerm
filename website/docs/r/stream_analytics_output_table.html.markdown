@@ -44,7 +44,7 @@ resource "azurerm_stream_analytics_output_table" "example" {
   table                     = azurerm_storage_table.example.name
   partition_key             = "foo"
   row_key                   = "bar"
-  batch_size                = 100
+  batch_size                = 50
 }
 ```
 
@@ -68,7 +68,7 @@ The following arguments are supported:
 
 * `row_key` - (Required) The name of the output column that contains the row key.
 
-* `batch_size` - (Required) The number of records for a batch operation. Must be between `1` and `100`.
+* `batch_size` - (Optional) The number of records for a batch operation. Must be between `1` and `100`. Defaults to `100`.
 
 ## Attributes Reference
 

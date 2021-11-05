@@ -84,7 +84,7 @@ func (r OutputTableResource) Arguments() map[string]*pluginsdk.Schema {
 
 		"batch_size": {
 			Type:         pluginsdk.TypeInt,
-			Required:     true,
+			Optional:     true,
 			Default:	  100,
 			ValidateFunc: validation.IntBetween(1, 100),
 		},
